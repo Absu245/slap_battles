@@ -2,6 +2,7 @@ local lplr = game.Players.LocalPlayer
 local char = lplr.Character
 local humrp = char.HumanoidRootPart
 local teleporter = workspace.Lobby.Teleport2
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Absu245/slap_battles/main/autofarm.lua'))()")
 firetouchinterest(humrp,teleporter,1)
 firetouchinterest(humrp,teleporter,0)
 task.wait(2)
