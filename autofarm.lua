@@ -1,3 +1,5 @@
+repeat wait() until game.Players.LocalPlayer.Character
+repeat wait() until game.Players.LocalPlayer.Character.HumanoidRootPart
 local lplr = game.Players.LocalPlayer
 local char = lplr.Character
 local humrp = char.HumanoidRootPart
