@@ -7,7 +7,9 @@ local teleporter = workspace.Lobby.Teleport2
 queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Absu245/slap_battles/main/autofarm.lua'))()")
 firetouchinterest(humrp,teleporter,1)
 firetouchinterest(humrp,teleporter,0)
-task.wait(2)
+repeat
+   wait()
+until game.Players.LocalPlayer.Character.isInArena.Value == true
 for _,v in pairs(workspace.Arena:GetDescendants()) do
     if string.find(v.Name, "Slapple" or "GoldenSlapple") and v:FindFirstChild("Glove") and v.Glove:FindFirstChildOfClass("TouchTransmitter") then
         firetouchinterest(char.Head, v.Glove, 1)
