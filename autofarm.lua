@@ -1,5 +1,20 @@
 repeat wait() until game.Players.LocalPlayer.Character
 repeat wait() until game.Players.LocalPlayer.Character.HumanoidRootPart
+function Callback(answer)
+    if answer == "Yes, please" then
+        _G.donthop = true
+end
+end
+local Bindable = Instance.new("BindableFunction")
+Bindable.OnInvoke = Callback
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Your doggy farm.";
+    Text = "Do you want to stop?";
+    Duration = "300";
+    Button1 = "Yes, please";
+    Callback = Bindable
+})
 local lplr = game.Players.LocalPlayer
 local char = lplr.Character
 local humrp = char.HumanoidRootPart
@@ -17,6 +32,7 @@ for _,v in pairs(workspace.Arena:GetDescendants()) do
         wait(0.05)
     end
 end
+if _G.donthop then return end
 local Http = game:GetService("HttpService")
 local TPS = game:GetService("TeleportService")
 local Api = "https://games.roblox.com/v1/games/"
