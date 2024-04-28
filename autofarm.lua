@@ -26,6 +26,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Text = "", -- Required
 })
 while true do
+pcall(function()
 local Http = game:GetService("HttpService")
 local TPS = game:GetService("TeleportService")
 local Api = "https://games.roblox.com/v1/games/"
@@ -44,5 +45,6 @@ local Server, Next; repeat
 until Server
 
 TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end)
 task.wait(2)
 end
