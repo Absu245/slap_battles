@@ -25,6 +25,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Collected all, hopping", -- Required
 	Text = "", -- Required
 })
+while true do
 local Http = game:GetService("HttpService")
 local TPS = game:GetService("TeleportService")
 local Api = "https://games.roblox.com/v1/games/"
@@ -43,3 +44,5 @@ local Server, Next; repeat
 until Server
 
 TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+task.wait(2)
+end
