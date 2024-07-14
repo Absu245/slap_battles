@@ -1,4 +1,6 @@
 --dont abuse it pls :)
+local Player = game:GetService('Players').LocalPlayer
+Player.CharacterAdded:Wait()
 repeat wait() until game.Players.LocalPlayer.Character
 repeat wait() until game.Players.LocalPlayer.Character.HumanoidRootPart
 game:GetService("StarterGui"):SetCore("SendNotification",{
