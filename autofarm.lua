@@ -1,4 +1,5 @@
 --dont abuse it pls :)
+--math
 local Player = game:GetService('Players').LocalPlayer
 Player.CharacterAdded:Wait()
 repeat wait() until game.Players.LocalPlayer.Character
