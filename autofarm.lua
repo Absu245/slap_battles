@@ -1,5 +1,5 @@
 --dont abuse it pls :)
-repeat wait() until game.Players.LocalPlayer
+repeat wait() until game:IsLoaded() == true
 repeat wait() until game.Players.LocalPlayer.Character
 repeat wait() until game.Players.LocalPlayer.Character.HumanoidRootPart
 game:GetService("StarterGui"):SetCore("SendNotification",{
